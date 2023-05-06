@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+    <script src="./script.js" defer></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @font-face {
+        font-family: good;
+        src: url('./fonts/PublicSans-VariableFont_wght.ttf');
+      }
+      *{
+        margin: 0;
+        border: 0;
+        font-family: good;
+      }
+      body{
+        display: flex;
+        border: 1px solid black;
+        height: 100vh;
+        background-color: hsl(218, 23%, 16%);
+      }
+      .container{
+        align-items: center;
+        align-content: center;
+        border: 1px solid red;
+        margin: auto;
+        background-color: hsl(217, 19%, 24%);
+        border-radius: 1em;
+        text-transform: uppercase;
+        color:hsl(150, 100%, 66%);
+        font-size: 0.8em;
+        text-align: center;
+        padding-top: 3%;
+        letter-spacing: .2em;
+        width: 30%;
+      }
+      .advice-box{
+        /* background-color: white; */
+        height: 5em;
+        margin-top: 10%;
+        border: 1px solid yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      Advice #
+      <div class="advice-box"></div>
+    </div>
+  </body>
+</html>
