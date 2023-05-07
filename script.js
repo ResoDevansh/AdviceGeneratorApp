@@ -1,6 +1,8 @@
 let adviceBox = document.querySelector(".advice-box");
 let container = document.querySelector(".container");
 let adviceID = document.querySelector(".id");
+let dice = document.querySelector(".dice");
+let currID;
 
 const randomAdviceGenerator = async () => {
   try {
@@ -11,11 +13,22 @@ const randomAdviceGenerator = async () => {
       );
     }
     let data = await response.json();
+    let temp = Number.parseInt(`${data.slip.id}`, 10);
+    if (temp == currID) {
+      randomAdviceGenerator()
+      return 
+    }
     adviceBox.innerHTML = `"${data.slip.advice}"<img src="./images/pattern-divider-desktop.svg">`;
-    adviceID.innerHTML=`${data.slip.id}`
-    //   return data.slip.advice
+    adviceID.innerHTML = `${data.slip.id}`; ''
+    currID = Number.parseInt(`${data.slip.id}`, 10)
   } catch (error) {
     console.log(error);
   }
 };
-randomAdviceGenerator();
+
+randomAdviceGenerator()
+
+dice.addEventListener("click", () => {
+  console.log(currID)
+  randomAdviceGenerator();
+});
