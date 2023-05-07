@@ -18,20 +18,20 @@
     <style>
       @font-face {
         font-family: good;
-        src: url('./fonts/PublicSans-VariableFont_wght.ttf');
+        src: url("./fonts/PublicSans-VariableFont_wght.ttf");
       }
-      *{
+      * {
         margin: 0;
         border: 0;
         font-family: good;
       }
-      body{
+      body {
         display: flex;
         border: 1px solid black;
         height: 100vh;
         background-color: hsl(218, 23%, 16%);
       }
-      .container{
+      .container {
         align-items: center;
         align-content: center;
         border: 1px solid red;
@@ -39,25 +39,58 @@
         background-color: hsl(217, 19%, 24%);
         border-radius: 1em;
         text-transform: uppercase;
-        color:hsl(150, 100%, 66%);
+        color: hsl(150, 100%, 66%);
         font-size: 0.8em;
         text-align: center;
         padding-top: 3%;
-        letter-spacing: .2em;
+        letter-spacing: 0.2em;
         width: 30%;
+        /* display: flex;
+        flex-direction: column; */
       }
-      .advice-box{
-        /* background-color: white; */
-        height: 5em;
-        margin-top: 10%;
+      .container img {
+        margin-top: 8%;
+        width: 90%;
+        /* border: 1px solid red */
+      }
+      .advice-box {
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 1.8em;
+        font-weight: 600;
+        color: hsl(193, 38%, 86%);
+        /* min-height: 2em; */
+        padding: 0 2em;
+        margin-top: 5%;
         border: 1px solid yellow;
+      }
+      .dice {
+        border-radius: 50%;
+        width: fit-content;
+        padding: 3%;
+        border: 1px solid white;
+        background-color: hsl(150, 100%, 66%);
+        margin-top: 5%;
+        text-align: auto;
+        position: relative;
+        left: 42%;
+        top: 2em;
+      }
+      .dice img {
+        /* border: 1px solid salmon; */
+        /* background-color: hsl(150, 100%, 66%); */
+        height: 2em;
+        width: 2em;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      Advice #
-      <div class="advice-box"></div>
+      Advice #&nbsp;<span class="id"></span>
+      <div class="advice-box">
+        <img src="./images/pattern-divider-desktop.svg" />
+      </div>
+      <div class="dice"><img src="./images/icon-dice.svg" /></div>
     </div>
   </body>
 </html>
